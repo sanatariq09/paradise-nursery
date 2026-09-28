@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f5f9f4; }
+
+.landing-page { position: relative; min-height: 100vh; }
+.landing-page.fade-out { display: none; }
+
+.background-image {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: url('https://cdn.pixabay.com/photo/2017/09/04/18/39/monstera-2714756_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background-image::after { content: ''; position: absolute; inset: 0; background: rgba(0, 40, 10, 0.55); }
+
+.content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; color: #fff; padding: 40px 20px; }
+.landing_content { text-align: center; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.landing_content h1 { font-size: 3rem; margin: 0 0 10px; }
+.landing_content p { font-size: 1.4rem; }
+.divider { width: 120px; height: 4px; background: #8bc34a; margin: 10px 0 20px; border-radius: 2px; }
+
+.get-started-button {
+  padding: 14px 40px; font-size: 1.2rem; border: none; border-radius: 30px;
+  background: #4caf50; color: #fff; cursor: pointer; transition: background .2s, transform .2s;
+}
+.get-started-button:hover { background: #388e3c; transform: scale(1.05); }
+
+.aboutus_container { max-width: 800px; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 20px 30px; margin-top: 30px; }
+.about-us h2 { margin-top: 0; }
+.about-us p { line-height: 1.6; }
+
+.product-list-container { display: none; }
+.product-list-container.visible { display: block; }
